@@ -43,7 +43,7 @@ export default class DeliveryResult extends React.Component {
         <View>
           {this.props.track.result.map((u, i) => {
             return (
-              <Text key={i}>{u}</Text>
+              <Text style={{textAlign:'left'}} key={i}>{u}</Text>
             )
           })
 }

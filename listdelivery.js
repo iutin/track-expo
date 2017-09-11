@@ -45,8 +45,10 @@ class Listdelivery extends React.Component {
         <List containerStyle={{marginBottom: 20, width:'80%'}}>
           {
             list.map((l, i) => (
-              <TouchableOpacity
-                style={styles.row}
+              <ListItem
+                key={i}
+                title={l.name}
+                containerStyle={styles.row}
                 key={i}
                 onPress={() =>{
                   this.props.clearResult();
@@ -54,12 +56,8 @@ class Listdelivery extends React.Component {
                     name: l.name,
                     type: l.type
                   })}}
-              >
-              <ListItem
-                key={i}
-                title={l.name}
               />
-            </TouchableOpacity>
+
             ))
           }
         </List>
