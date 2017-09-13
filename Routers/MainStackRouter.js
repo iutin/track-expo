@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { StackNavigator } from "react-navigation";
-import Listdelivery from '../listdelivery'
-import Delivery from '../delivery'
-import LogoScreen from '../logoscreen'
+import Listdelivery from '../components/listdelivery/listdelivery'
+import Delivery from '../components/delivery/delivery'
+import LogoScreen from '../components/logoscreen/logoscreen'
 
 export default (TrackApp = StackNavigator({
   Login: {

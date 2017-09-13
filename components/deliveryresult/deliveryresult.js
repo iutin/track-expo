@@ -1,39 +1,16 @@
 import React from 'react'
-import {TouchableHighlight, View, Text, StyleSheet} from 'react-native'
+import {View, Text} from 'react-native'
 import {Button, Card, Icon} from 'react-native-elements'
-
-let styles = StyleSheet.create({
-  container: {
-    marginTop: 0,
-    paddingLeft: 0,
-    paddingRight: 0
-  },
-  text: {
-    textAlign: 'center'
-  },
-  button: {
-    height: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#0b7eff'
-  },
-  buttonText: {
-    color: 'white'
-  }
-});
+import styles from './styles'
 
 export default class DeliveryResult extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    console.log(this.props.track);
-
-    let display = 1;
+    let opacity = 0;
     if (this.props.track.isShow && this.props.track.result.length > 0) {
-      display = 1;
-    } else {
-      display = 0;
+      opacity = 1;
     }
 
     if (this.props.track.error == true) {
@@ -41,12 +18,12 @@ export default class DeliveryResult extends React.Component {
     }
     return (
       <Card containerStyle={{
-        opacity: display
+        opacity
       }} title="Результат по треку">
         <View>
           {this.props.track.result.map((u, i) => {
             return (
-              <Text style={{textAlign:'left'}} key={i}>{u}</Text>
+              <Text style={styles.text} key={i}>{u}</Text>
             )
           })
 }

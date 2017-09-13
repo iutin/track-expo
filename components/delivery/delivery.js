@@ -1,29 +1,10 @@
 import React from 'react'
-import {TouchableHighlight, View, Text, StyleSheet, ScrollView} from 'react-native'
-import {FormLabel, FormInput, Button, Card, Icon} from 'react-native-elements'
+import {View, ScrollView} from 'react-native'
 import {connect} from 'react-redux'
-import {fetchTrackFromAPI} from './actions'
-import Form from './deliveryform'
-import Formresult from './deliveryresult'
-let styles = StyleSheet.create({
-  container: {
-    marginTop: 0,
-    paddingLeft: 0,
-    paddingRight: 0
-  },
-  text: {
-    textAlign: 'center'
-  },
-  button: {
-    height: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#0b7eff'
-  },
-  buttonText: {
-    color: 'white'
-  }
-});
+import {fetchTrackFromAPI} from '../../actions'
+import styles from './styles'
+import Form from '../deliveryform/deliveryform'
+import Formresult from '../deliveryresult/deliveryresult'
 
 class DeliveryForm extends React.Component {
   static navigationOptions = ({navigation}) => ({headerBackTitle: null, headerTruncatedBackTitle: null, title: `${navigation.state.params.name}`});
@@ -37,7 +18,7 @@ class DeliveryForm extends React.Component {
   }
   render() {
     return (
-      
+
       <ScrollView style={{
         marginBottom: 20
       }}>
