@@ -6,7 +6,15 @@ import styles from './styles'
 import Form from '../deliveryform/deliveryform'
 import Formresult from '../deliveryresult/deliveryresult'
 
+/**
+ * [navigationOptions description]
+ * @type {[type]}
+ */
 class DeliveryForm extends React.Component {
+  /**
+   * [navigationOptions description]
+   * @type {[type]}
+   */
   static navigationOptions = ({navigation}) => ({headerBackTitle: null, headerTruncatedBackTitle: null, title: `${navigation.state.params.name}`});
   constructor(props) {
     super(props);
@@ -16,6 +24,10 @@ class DeliveryForm extends React.Component {
       type: props.navigation.state.params.type
     };
   }
+  /**
+   * [render description]
+   * @return {[type]} [description]
+   */
   render() {
     return (
 
@@ -32,10 +44,20 @@ class DeliveryForm extends React.Component {
   }
 }
 
+/**
+ * [mapStateToProps description]
+ * @param  {[type]} state [description]
+ * @return {[type]}       [description]
+ */
 function mapStateToProps(state) {
   return {track: state.track}
 }
 
+/**
+ * [mapDispatchToProps description]
+ * @param  {[type]} dispatch [description]
+ * @return {[type]}          [description]
+ */
 function mapDispatchToProps(dispatch) {
   return {
     getTrack: (barcode, type) => dispatch(fetchTrackFromAPI(barcode, type))

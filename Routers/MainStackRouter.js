@@ -4,6 +4,10 @@ import Listdelivery from '../components/listdelivery/listdelivery'
 import Delivery from '../components/delivery/delivery'
 import LogoScreen from '../components/logoscreen/logoscreen'
 
+/**
+ * [TrackApp description]
+ * @type {[type]}
+ */
 export default (TrackApp = StackNavigator({
   Login: {
     screen: LogoScreen

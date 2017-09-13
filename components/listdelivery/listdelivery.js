@@ -5,7 +5,16 @@ import {List, ListItem } from 'react-native-elements'
 import {connect} from 'react-redux'
 import styles from './styles'
 
+/**
+ * [list description]
+ * @type {Array}
+ */
 class Listdelivery extends React.Component {
+  /**
+   * [constructor description]
+   * @param  {[type]} props [description]
+   * @return {[type]}       [description]
+   */
   constructor(props) {
     super(props);
   }
@@ -17,6 +26,11 @@ class Listdelivery extends React.Component {
       {type:"delivery", name:"Деливери"},
       {type:"autolux", name:"Автолюкс"}
     ];
+    /**
+     * [description]
+     * @param  {[type]} View [description]
+     * @return {[type]}      [description]
+     */
     return (
       <View style={styles.container}>
 
@@ -45,15 +59,29 @@ class Listdelivery extends React.Component {
     )
   }
 }
+/**
+ * [navigationOptions description]
+ * @type {Object}
+ */
 Listdelivery.navigationOptions = {
   title: "Track Package",
   headerLeft: null,
 };
 
+/**
+ * [mapStateToProps description]
+ * @param  {[type]} state [description]
+ * @return {[type]}       [description]
+ */
 function mapStateToProps(state) {
   return {track: state.track}
 }
 
+/**
+ * [mapDispatchToProps description]
+ * @param  {[type]} dispatch [description]
+ * @return {[type]}          [description]
+ */
 function mapDispatchToProps(dispatch) {
   return {
     clearResult: () => dispatch({type: CHANGE_ROUTER}),

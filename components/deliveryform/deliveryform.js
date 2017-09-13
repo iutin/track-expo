@@ -5,6 +5,10 @@ import {connect} from 'react-redux'
 import {fetchTrackFromAPI} from '../../actions'
 import styles from './styles'
 
+/**
+ * [navigationOptions description]
+ * @type {[type]}
+ */
 export default class DeliveryForm extends React.Component {
   static navigationOptions = ({navigation}) => ({headerBackTitle: null, headerTruncatedBackTitle: null, title: `${navigation.state.params.name}`});
   constructor(props) {
@@ -13,9 +17,19 @@ export default class DeliveryForm extends React.Component {
       barcode: ''
     };
   }
+  /**
+   * [changeTrack description]
+   * @param  {[type]} barcode [description]
+   * @return {[type]}         [description]
+   */
   changeTrack = (barcode) => {
+    barcode = barcode.replace(/^\s+|\s+$/gm,'');
     this.setState({barcode})
   }
+  /**
+   * [render description]
+   * @return {[type]} [description]
+   */
   render() {
     let title = this.props.isFetching == false
       ? 'Найти'
