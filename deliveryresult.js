@@ -27,12 +27,15 @@ export default class DeliveryResult extends React.Component {
     super(props);
   }
   render() {
+    console.log(this.props.track);
+
     let display = 1;
     if (this.props.track.isShow && this.props.track.result.length > 0) {
       display = 1;
     } else {
       display = 0;
     }
+
     if (this.props.track.error == true) {
       alert('Информации по трек-номеру нет!');
     }

@@ -37,11 +37,12 @@ class DeliveryForm extends React.Component {
   }
   render() {
     return (
+      
       <ScrollView style={{
         marginBottom: 20
       }}>
         <View style={styles.container}>
-          <Form getTrack={this.props.getTrack} isFetching={this.props.track.isFetching} type={this.state.type} />
+          <Form getTracks={this.props.getTrack} isFetching={this.props.track.isFetching} type={this.state.type} />
           <Formresult track={this.props.track}/>
         </View>
       </ScrollView>

@@ -77,7 +77,6 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    getTrack: (barcode, type) => dispatch(fetchTrackFromAPI(barcode, type)),
     clearResult: () => dispatch({type: CHANGE_ROUTER}),
   }
 }

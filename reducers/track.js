@@ -14,6 +14,7 @@ export default function trackReducer (state = initialState, action) {
         ...state,
         result:[],
         isShow: false,
+        error: false,
         isFetching: true
       }
     case FETCHING_TRACK_SUCCESS:

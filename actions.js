@@ -1,6 +1,5 @@
 import {FETCHING_TRACK, FETCHING_TRACK_SUCCESS, FETCHING_TRACK_FAILURE,CHANGE_ROUTER} from './constants'
 export function fetchTrackFromAPI(barcode, type) {
-  // barcode='20450044933131';
   return (dispatch) => {
     dispatch(getTrack())
     fetch("https://track-package.com.ua/app/api.php?token=ff3a03dbf77845a5a65d36e63d20132b&" +
@@ -33,7 +32,4 @@ export function getTrackSuccess(data) {
 
 export function getTrackFailure() {
   return {type: FETCHING_TRACK_FAILURE}
-}
-export function clearResult() {
-  return {type: CHANGE_ROUTER}
 }

@@ -60,7 +60,7 @@ export default class DeliveryForm extends React.Component {
           width: '100%'
         }} onPress={() => {
           if(this.props.isFetching==false){
-            this.props.getTrack(this.state.barcode, this.props.type)
+            this.props.getTracks(this.state.barcode, this.props.type)
           }
         }} title={title}/>
       </Card>
