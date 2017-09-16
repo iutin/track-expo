@@ -30,14 +30,14 @@ export default class LogoScreen extends React.Component {
    */
   render() {
     return (
-      <Image style={styles.background} source={require('../../images/background.jpg')}>
+      <ImageBackground style={styles.background} source={require('../../images/background.jpg')}>
         <View style={styles.view}>
           <Text style={styles.text}>Track Package</Text>
           <Button buttonStyle={styles.button} backgroundColor="steelblue" onPress={() => {
             this.props.navigation.navigate("Listdelivery")
           }} title='Старт'/>
         </View>
-      </Image>
+      </ImageBackground>
     )
 
   }
